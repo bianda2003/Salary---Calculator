@@ -3,6 +3,7 @@ import employees from "./data/employees";
 import EmployeeList from "./components/EmployeeList";
 import SalaryForm from "./components/SalaryForm";
 import SamanthaForm from "./components/SamanthaForm";
+import PadmaForm from "./components/PadmaForm";
 
 export default function App() {
 
@@ -43,6 +44,9 @@ export default function App() {
           )}
           {selectedEmployee.type === "samantha" && (
             <SamanthaForm />
+          )}
+          {selectedEmployee.type === "padma" && (
+            <PadmaForm />
           )}
 
         </div>
