@@ -2,6 +2,7 @@ import { useState } from "react";
 import employees from "./data/employees";
 import EmployeeList from "./components/EmployeeList";
 import SalaryForm from "./components/SalaryForm";
+import SamanthaForm from "./components/SamanthaForm";
 
 export default function App() {
 
@@ -39,6 +40,9 @@ export default function App() {
 
           {selectedEmployee.type === "sarath" && (
             <SalaryForm />
+          )}
+          {selectedEmployee.type === "samantha" && (
+            <SamanthaForm />
           )}
 
         </div>
