@@ -1,6 +1,9 @@
 import { useState } from "react";
+
 import employees from "./data/employees";
+
 import EmployeeList from "./components/EmployeeList";
+
 import SalaryForm from "./components/SalaryForm";
 import SamanthaForm from "./components/SamanthaForm";
 import PadmaForm from "./components/PadmaForm";
@@ -14,11 +17,24 @@ export default function App() {
 
   return (
 
-    <div className="min-h-screen p-10 bg-gray-100">
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-8">
 
-      <h1 className="text-6xl font-bold text-center text-blue-600 mb-10">
+      {/* TITLE */}
+
+      <h1
+        className="
+          text-3xl
+          sm:text-5xl
+          font-bold
+          text-center
+          text-blue-600
+          mb-8
+        "
+      >
         Salary Calculator
       </h1>
+
+      {/* EMPLOYEE LIST */}
 
       {!selectedEmployee ? (
 
@@ -29,35 +45,73 @@ export default function App() {
 
       ) : (
 
-        <div className="bg-white p-8 rounded-3xl shadow-xl">
+        <div
+          className="
+            bg-white
+            p-4
+            sm:p-8
+            rounded-3xl
+            shadow-xl
+            max-w-4xl
+            mx-auto
+          "
+        >
+
+          {/* BACK BUTTON */}
 
           <button
             onClick={() => setSelectedEmployee(null)}
-            className="bg-black text-white px-5 py-2 rounded-xl mb-6"
+            className="
+              bg-black
+              text-white
+              px-5
+              py-2
+              rounded-xl
+              mb-6
+              w-full
+              sm:w-auto
+            "
           >
             ← Back
           </button>
 
-          <h2 className="text-4xl font-bold mb-8">
+          {/* EMPLOYEE NAME */}
+
+          <h2
+            className="
+              text-2xl
+              sm:text-4xl
+              font-bold
+              mb-8
+              break-words
+            "
+          >
             {selectedEmployee.name}
           </h2>
+
+          {/* FORMS */}
 
           {selectedEmployee.type === "sarath" && (
             <SalaryForm />
           )}
+
           {selectedEmployee.type === "samantha" && (
             <SamanthaForm />
           )}
+
           {selectedEmployee.type === "padma" && (
             <PadmaForm />
           )}
-          {selectedEmployee.type === "niluka" && (
+
+          {selectedEmployee.name === "Niluka" && (
             <NilukaForm />
           )}
-          {selectedEmployee.type === "erandi" && (
+
+          {selectedEmployee.name === "Erandi Perera" && (
             <ErandiForm />
           )}
-          {selectedEmployee.type === "priyanka" && (
+
+          {selectedEmployee.name === "Priyanka" && (
             <PriyankaForm />
           )}
 
