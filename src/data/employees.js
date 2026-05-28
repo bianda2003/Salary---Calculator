@@ -22,7 +22,7 @@ const employees = [
   {
     id: 5,
     name: "Erandi Perera",
-    type: "daily",
+    type: "erandi",
   },
   {
     id: 6,
