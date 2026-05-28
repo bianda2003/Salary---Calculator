@@ -6,6 +6,7 @@ import SamanthaForm from "./components/SamanthaForm";
 import PadmaForm from "./components/PadmaForm";
 import NilukaForm from "./components/NilukaForm";
 import ErandiForm from "./components/ErandiForm";
+import PriyankaForm from "./components/PriyankaForm";
 
 export default function App() {
 
@@ -55,6 +56,9 @@ export default function App() {
           )}
           {selectedEmployee.type === "erandi" && (
             <ErandiForm />
+          )}
+          {selectedEmployee.type === "priyanka" && (
+            <PriyankaForm />
           )}
 
         </div>

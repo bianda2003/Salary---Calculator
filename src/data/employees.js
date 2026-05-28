@@ -27,7 +27,7 @@ const employees = [
   {
     id: 6,
     name: "Priyanka",
-    type: "daily",
+    type: "priyanka",
   },
 ];
 
