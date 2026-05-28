@@ -4,6 +4,7 @@ import EmployeeList from "./components/EmployeeList";
 import SalaryForm from "./components/SalaryForm";
 import SamanthaForm from "./components/SamanthaForm";
 import PadmaForm from "./components/PadmaForm";
+import NilukaForm from "./components/NilukaForm";
 
 export default function App() {
 
@@ -47,6 +48,9 @@ export default function App() {
           )}
           {selectedEmployee.type === "padma" && (
             <PadmaForm />
+          )}
+          {selectedEmployee.type === "niluka" && (
+            <NilukaForm />
           )}
 
         </div>
