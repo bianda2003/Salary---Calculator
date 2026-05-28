@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { generatePayslip } from "../utils/generatePayslip";
 
 export default function PadmaForm() {
 
@@ -205,6 +206,17 @@ export default function PadmaForm() {
             </p>
 
           </div>
+          <button
+            onClick={() =>
+                generatePayslip(
+                "Padma Lal",
+                salary
+                )
+            }
+            className="mt-6 bg-green-600 hover:bg-green-700 text-white font-bold p-4 rounded-xl"
+            >
+            Download Payslip PDF
+            </button>
 
         </div>
 

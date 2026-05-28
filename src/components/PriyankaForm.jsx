@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { generatePayslip } from "../utils/generatePayslip";
 
 export default function PriyankaForm() {
 
@@ -193,8 +194,20 @@ export default function PriyankaForm() {
             </p>
 
           </div>
+          <button
+            onClick={() =>
+                generatePayslip(
+                "Priyanka",
+                salary
+                )
+            }
+            className="mt-6 bg-green-600 hover:bg-green-700 text-white font-bold p-4 rounded-xl"
+            >
+            Download Payslip PDF
+            </button>
 
         </div>
+        
 
       )}
 
